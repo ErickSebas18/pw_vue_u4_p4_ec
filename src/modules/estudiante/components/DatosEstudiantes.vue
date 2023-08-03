@@ -1,7 +1,12 @@
 <template>
-  <div class="container">
+  <div class="consultar">
+    <h1>Consultar Estudiante</h1>
     <input type="text" placeholder="Ingrese la Cédula" v-model="cedula"/>
     <button @click="consultarEstudiante">Consultar</button>
+    <label for="">Nombre</label>
+    <input v-model="nombre" type="text">
+    <label for="">Apellido</label>
+    <input v-model="apellido" type="text">
   </div>
 </template>
 
@@ -12,11 +17,15 @@ export default {
   data() {
     return {
       cedula: null,
+      nombre: "",
+      apellido: ""
     };
   },
   methods: {
     async consultarEstudiante() {
-       await obtenerEstudianteFacade(this.cedula);
+       const data = await obtenerEstudianteFacade(this.cedula);
+       this.nombre = data.nombre
+       this.apellido = data.apellido
     }
   },
 };
