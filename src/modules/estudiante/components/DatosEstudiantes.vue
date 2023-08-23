@@ -36,6 +36,11 @@ export default {
       this.apellido = data.apellido;
     },
   },
+  mounted(){
+    const{cedula} = this.$route.params;
+    console.log(cedula)
+    obtenerEstudianteFacade(cedula)
+  }
 };
 </script>
 
