@@ -14,7 +14,7 @@ const obtenerEstudianteAxios = async (cedula) => {
     //En el config vamos a enviar todos los datos de cabecera
     //Lo declaro como si fuese un json
     const headers = {
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjc0OTA5NiwiZXhwIjoxNjkyNzc5MDk2fQ.LNuA6TtJ679Kq1QXfmol-KRMpXc-YIzEZX2IPF4Q1BQ4faTY02M3al0tdiNN8MG7cGcAINJ9yq7JNV8j2HEFKQ",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjg0MjMyNywiZXhwIjoxNjkyODcyMzI3fQ.AsQ_z5_OmYqv3NjtNW5THrsWR88GSpouRVvMzXkGRYJgGbVOVnNdIfrcKDAu1qVEWKezOCxKWsU75J25Vf-BGQ",
         "Mensaje": "Valor1"
     }
     const data = axios.get(`http://localhost:8080/API/v1/Matricula/estudiantes/${cedula}`, {headers: headers}).then(r => r.data)
@@ -28,7 +28,7 @@ const ingresarEstudianteFacade =  (bodyEstudiante) => {
 
 const ingresarEstudiante = (bodyEstudiante) => {
     const headers = {
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjc0OTA5NiwiZXhwIjoxNjkyNzc5MDk2fQ.LNuA6TtJ679Kq1QXfmol-KRMpXc-YIzEZX2IPF4Q1BQ4faTY02M3al0tdiNN8MG7cGcAINJ9yq7JNV8j2HEFKQ",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjg0MjMyNywiZXhwIjoxNjkyODcyMzI3fQ.AsQ_z5_OmYqv3NjtNW5THrsWR88GSpouRVvMzXkGRYJgGbVOVnNdIfrcKDAu1qVEWKezOCxKWsU75J25Vf-BGQ",
         "Mensaje": "Valor1"
     } 
     axios.post(`http://localhost:8080/API/v1/Matricula/estudiantes`, bodyEstudiante, {headers: headers}).then(r => r.data)
@@ -41,7 +41,7 @@ const actualizarEstudianteFacade = async (id, bodyEstudiante) => {
 
 const actualizarEstudiante = async (id, bodyEstudiante) => {
     const headers = {
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjc0OTA5NiwiZXhwIjoxNjkyNzc5MDk2fQ.LNuA6TtJ679Kq1QXfmol-KRMpXc-YIzEZX2IPF4Q1BQ4faTY02M3al0tdiNN8MG7cGcAINJ9yq7JNV8j2HEFKQ",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjg0MjMyNywiZXhwIjoxNjkyODcyMzI3fQ.AsQ_z5_OmYqv3NjtNW5THrsWR88GSpouRVvMzXkGRYJgGbVOVnNdIfrcKDAu1qVEWKezOCxKWsU75J25Vf-BGQ",
         "Mensaje": "Valor1"
     }
     axios.put(`http://localhost:8080/API/v1/Matricula/estudiantes/${id}`, bodyEstudiante, {headers: headers}).then(r => r.data)
@@ -54,7 +54,7 @@ const eliminarEstudianteFacade = async (id) => {
 
 const eliminarEstudiante = async (id) => {
     const headers = {
-        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjc0OTA5NiwiZXhwIjoxNjkyNzc5MDk2fQ.LNuA6TtJ679Kq1QXfmol-KRMpXc-YIzEZX2IPF4Q1BQ4faTY02M3al0tdiNN8MG7cGcAINJ9yq7JNV8j2HEFKQ",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJFcmljayIsImlhdCI6MTY5Mjg0MjMyNywiZXhwIjoxNjkyODcyMzI3fQ.AsQ_z5_OmYqv3NjtNW5THrsWR88GSpouRVvMzXkGRYJgGbVOVnNdIfrcKDAu1qVEWKezOCxKWsU75J25Vf-BGQ",
         "Mensaje": "Valor1"
     }
     axios.delete(`http://localhost:8080/API/v1/Matricula/estudiantes/${id}`, {headers: headers}).then(r => r.data)
